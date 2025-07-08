@@ -1,86 +1,148 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peachy Equities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peachy Equities - Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --peach-faded: #FAD4BF;
+      --black: #111111;
+      --white: #ffffff;
+      --gray-light: #f8f8f8;
+      --gray-dark: #444444;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #111;
-      line-height: 1.6;
+      background-color: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
-      background-color: #ffffff;
+      background-color: var(--white);
       padding: 1.5rem 2rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     header h1 {
       margin: 0;
-      font-size: 1.75rem;
-      color: #ff914d;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--peach-faded);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    nav a {
+      margin-left: 1.8rem;
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--peach-faded);
     }
     .container {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
+      margin: 2.5rem auto 4rem;
+      padding: 0 1rem;
+      flex-grow: 1;
     }
     .hero {
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 4rem 1rem 4.5rem;
+      background-color: var(--peach-faded);
+      border-radius: 14px;
+      box-shadow: 0 10px 20px rgba(250, 212, 191, 0.3);
+      color: var(--black);
     }
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
+      font-weight: 800;
     }
     .hero p {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       max-width: 600px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 2.5rem;
+      color: var(--gray-dark);
     }
     .cta-button {
-      background-color: #ff914d;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 1rem;
+      background-color: var(--black);
+      color: var(--peach-faded);
+      padding: 0.9rem 2.25rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.15rem;
       cursor: pointer;
+      border: none;
       text-decoration: none;
-      transition: background 0.2s ease;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     .cta-button:hover {
-      background-color: #e67c36;
+      background-color: #000000cc;
+      color: #fff;
     }
     section {
-      padding: 3rem 1rem;
-      border-top: 1px solid #eaeaea;
+      margin-top: 3.5rem;
+    }
+    .section-image {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(250, 212, 191, 0.3);
+      margin-bottom: 1.5rem;
     }
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin-bottom: 1rem;
-      color: #222;
+      color: var(--black);
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.15rem;
+      color: var(--gray-dark);
+      line-height: 1.65;
     }
     footer {
+      background-color: var(--black);
+      color: var(--peach-faded);
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #888;
+      padding: 1.75rem 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+    footer a {
+      color: var(--peach-faded);
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Peachy Equities</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+    </nav>
   </header>
 
-  <div class="container">
-    <section class="hero">
+  <main class="container">
+    <section class="hero" aria-label="Welcome message">
       <h2>Repositioning Distressed Multifamily Assets in the Southeast</h2>
       <p>
         We specialize in helping owners cut waste, boost NOI, and lease faster through strategic consulting and fractional leasing leadership.
@@ -88,28 +150,33 @@
       <a href="mailto:Yehuda@peachyequities.com" class="cta-button">Contact Us</a>
     </section>
 
-    <section>
+    <section aria-label="What we do">
+      <img
+        src="https://images.unsplash.com/photo-1572120360610-d971b9f2a56e?auto=format&fit=crop&w=900&q=80"
+        alt="Modern apartment building exterior"
+        class="section-image"
+      />
       <h3>What We Do</h3>
       <p>
         Peachy Equities partners with multifamily property owners to maximize asset value. We focus on hands-on asset management strategies that eliminate inefficiencies, optimize leasing operations, and drive sustainable NOI growth.
       </p>
     </section>
 
-    <section>
+    <section aria-label="Our approach">
+      <img
+        src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+        alt="Apartment complex courtyard with green landscaping"
+        class="section-image"
+      />
       <h3>Our Approach</h3>
       <p>
         We take a proactive, boots-on-the-ground approach to repositioning assets. From identifying operational weaknesses to executing smart leasing strategies, our team delivers the expertise and leadership needed to transform underperforming properties into thriving investments.
       </p>
     </section>
-
-    <section>
-      <h3>Get in Touch</h3>
-      <p>Email us at <a href="mailto:Yehuda@peachyequities.com">Yehuda@peachyequities.com</a> to learn how we can help unlock the full potential of your property.</p>
-    </section>
-  </div>
+  </main>
 
   <footer>
-    &copy; 2025 Peachy Equities. All rights reserved.
+    Contact us: <a href="mailto:Yehuda@peachyequities.com">Yehuda@peachyequities.com</a>
   </footer>
 </body>
 </html>
