@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peachy Equities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --peach: #ff914d;
+      --peach-dark: #e67619;
+      --black: #111;
+      --white: #fff;
+      --gray-light: #f9f9f9;
+      --gray-dark: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--white);
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      color: var(--peach);
+      font-weight: 800;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: var(--gray-light);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: var(--black);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: var(--gray-dark);
+    }
+
+    .cta-button {
+      background-color: var(--peach);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--peach-dark);
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      color: var(--black);
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--peach);
+      padding-left: 1rem;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: var(--gray-dark);
+    }
+
+    footer {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--peach);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Peachy Equities</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Repositioning Distressed Multifamily Assets</h2>
+    <p>Helping property owners cut waste, boost NOI, and lease faster through strategic consulting and fractional leasing leadership.</p>
+    <a href="mailto:Yehuda@peachyequities.com" class="cta-button">Email Us</a>
+  </section>
+
+  <section class="section" id="services">
+    <h3>Consulting Services</h3>
+    <p>We audit leasing, staffing, and capex to uncover inefficiencies, identify revenue leakage, and create actionable stabilization plans with clear KPIs.</p>
+  </section>
+
+  <section class="section">
+    <h3>Fractional Director of Leasing</h3>
+    <p>We provide experienced leasing leadership to your team on a fractional basis, enhancing velocity, execution, and occupancy while minimizing waste.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Peachy Equities. All rights reserved. Contact: <a href="mailto:Yehuda@peachyequities.com">Yehuda@peachyequities.com</a>
+  </footer>
+</body>
+</html>
